@@ -1,0 +1,1514 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  overflow-x: hidden;  
+}
+
+#root .App {
+  width: 100%;
+}
+
+.App nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color:lightgreen;
+  position: fixed;
+  height: 15vh;
+  width: 100%;
+  z-index: 999;
+  top: 0;
+  bottom:0;
+  left: 0;
+  right: 0;
+}
+
+nav h2 {
+  display: none;
+
+}
+
+nav img {
+  width:80px;
+  border-radius: 13%;
+  margin-left: 40px;
+  text-align: center;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  margin-right: 20px;
+}
+
+ul li {
+  list-style: none;
+  text-decoration: none;
+  color: black;
+  padding: 25px;
+  transition: all 0.3s ease;
+  font-size: 22px;
+  border: 5px solid transparent;
+}
+
+ul li a {
+  color: black;
+  text-decoration: none;
+}
+
+ul li:hover {
+  background-color: lightseagreen;
+  border: 5px solid black;
+  z-index: 1;
+}
+
+/*
+  HOME SECTION
+*/
+.App .home {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.home .coverBg {
+  width: 100%;
+  text-align: center;
+  height: 100vh;
+  background: url("bg5.png");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+  justify-content: flex-end;
+  animation-name: animate;
+  animation-duration: 3s;
+  animation-timing-function:ease;
+  transition: all 0.6s ease;
+  animation-iteration-count: 1;
+}
+
+@keyframes animate {
+  0% {
+    background-position:top;
+  }
+
+
+  50% {
+    background-position: center;
+  }
+
+  100% {
+    background-position: top;
+  }
+
+
+}
+
+.coverBg h2{
+  font-size: 45px;
+  font-weight: 600;
+  color: lightblue;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin-left: 20px;
+  margin-bottom: 0px ;
+}
+
+.coverBg p {
+  font-size: 20px;
+  text-align: start;
+  color: lightblue;
+  margin-left: 20px;
+}
+
+/*
+.coverBg form {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+*/
+
+/*
+form input {
+  font-size: 22px;
+  width: 100%;
+  background-color: black;
+  padding: 15px 30px;
+  border-radius: 3px;
+  margin: 10px;
+  color: lightgreen;
+  font-weight: 600;
+  outline: none;
+  border: 5px solid lightgreen;
+}
+*/
+
+.coverBg button {
+  font-size: 24px;
+  color: black;
+  font-weight: 600;
+  border: 5px solid black;
+  background: lightgreen;
+  text-align: center;
+  padding: 10px 10px;
+  transition: all 0.6s ease;
+  cursor: pointer;
+  margin-left: 20px;
+  margin-bottom: 40px;
+}
+
+.coverBg button:hover {
+  background: black;
+  color: lightgreen;
+  border-color: lightgreen;
+}
+
+/* RANDOM SECTION*/
+.home .quotes {
+  background-color: #282c34;
+  width: 100%;
+  padding: 20px;
+}
+
+.home .quotes h2 {
+  font-size: 30px;
+  color: lightgreen;
+}
+
+.quotes button {
+  font-size: 24px;
+  color: lightgreen;
+  background-color: black;
+  border: 2px solid lightgreen;
+  padding: 10px 10px;
+  text-align: center;
+  transition: all 0.6s ease;
+  cursor: pointer;
+  margin-top: -50px;
+}
+
+.quotes .quotes-area {
+  margin: -90px auto;
+  width: 60%;
+}
+
+.quotes-area h3 {
+  font-size: 35px;
+  color: lightblue;
+  margin-top: -60px;
+  text-align: left;
+}
+
+.quotes-area h5{
+  font-size: 80px;
+  color: red;
+}
+
+.quotes #left {
+  text-align: left;
+}
+.quotes #right {
+  text-align: right;
+}
+
+.quotes-area p {
+  font-size: 24px;
+  margin-top: -20px;
+  color: white;
+  text-align: right;
+  margin-bottom: -60px;
+}
+
+
+
+.quotes button:hover {
+  transform: scale(1.1);
+}
+
+/* SERVICES SECTION */
+.home .services {
+  background-color: #282c34;
+  width: 100%;
+  padding: 20px;
+}
+
+.home .services h2 {
+  color: lightgreen;
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+.services .service-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  gap: 20px;
+  width: 80%;
+  margin: 10px auto;
+}
+
+.service-list .service-box {
+  text-align: center;
+  border: 10px solid lightgreen;
+  padding: 10px;
+  background-color: black;
+}
+
+.service-box h2 {
+  color: white;
+}
+
+.service-box h2 i {
+  font-size: 100px;
+}
+.service-box h3 {
+  font-size: 24px;
+  color: lightgreen
+}
+
+.service-box p {
+  font-size: 18px;
+  color: lightgreen
+}
+
+.service-box button {
+  font-size: 20px;
+  background: #282c34;
+  border: 3px solid lightgreen;
+  padding: 7px 10px;
+  text-align: center;
+  margin: 5px auto;
+}
+
+.service-box button:hover {
+  background-color: black;
+  transform: scale(1.1);
+}
+
+/*ABOUT SECTION*/
+.App .home .about{
+  background-color: #282c34;
+  background: url("bg4.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  width:100%;
+  height: auto;
+  padding: 20px;
+}
+
+.about h2 {
+  font-size: 30px;
+  color: lightgreen;
+}
+
+.about .about-box {
+  background: #282c34;
+  height:auto;
+  width: 80%;
+  margin: 10px auto;
+  opacity: 0.92;
+  padding: 15px;
+  text-align: center;
+  border: 20px groove lightgreen;
+  border-radius: 10px;
+}
+
+.about-box img {
+  width: 50%;
+  margin: 10px auto;
+}
+
+.about-box h3 {
+  font-size: 26px;
+  color: lightgreen;
+}
+
+.about-box p{
+  font-size: 20px;
+  color: lightgreen;
+  font-weight: 600;
+}
+
+/*CONTACT SECTION*/
+
+.App footer {
+  text-align: center;
+  width: 100%;
+  background-color:lightgreen;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.App footer .contact {
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 7px;
+}
+
+.contact h4 {
+  font-size: 50px;
+  margin-top: 10px;
+  margin-bottom: 7px;
+  color: black;
+  text-decoration: underline;
+}
+
+.contact .contact-box {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 70%;
+}
+
+.contact-box a {
+  font-size: 70px;
+  color: black;
+  text-decoration: none;
+  transition: all 0.6s ease-in-out;
+}
+
+.contact-box a:hover {
+  margin-bottom: -15px;
+}
+
+.fa-facebook:hover {
+  color: royalblue
+}
+
+.fa-twitter:hover {
+  color: dodgerblue
+}
+
+.fa-instagram:hover {
+  color: orchid
+}
+
+.fa-google:hover {
+  color: green;
+}
+
+.fa-linkedin:hover {
+  color: dodgerblue;
+}
+
+/*FOOTER SECTION*/
+
+footer h3 {
+  font-size: 20px;
+}
+
+footer p {
+  font-size: 20px;
+  margin: 0px;
+}
+
+footer #github {
+  font-size: 50px;
+  margin: 0px auto;
+  cursor: pointer;
+}
+
+footer #github:hover {
+  transform: scale(1.1);
+  color: black;
+}
+
+/*CHARACTERS SECTION*/
+.App .characters {
+  padding-top: 100px;
+  background-color: #282c34;
+}
+
+.characters #head{
+  margin-top: 20px;
+  font-size: 40px;
+  color: lightgreen
+}
+
+.characters form {
+  width: 70%;
+  margin: 30px auto;
+}
+
+.characters form input {
+  width: 100%;
+  font-size: 24px;
+  color: black;
+  border: 7px solid limegreen;
+  background-color: whitesmoke;
+  padding: 15px;
+  outline: none;
+  text-indent: 3px;
+  margin: 10px auto;
+  font-weight: 600;
+}
+
+.characters form button {
+  font-size: 24px;
+  padding: 15px 40px;
+  border: 5px solid lightgreen;
+  color: lightgreen;
+  background: black;
+  margin: 20px auto;
+  cursor: pointer;
+}
+
+.characters h4 {
+  font-size: 20px;
+  color: white;
+  margin: -10px;
+}
+
+.characters #next {
+  font-size: 24px;
+  color: lightgreen;
+  background-color: black;
+  border: 5px solid lightgreen;
+  padding: 15px;
+  text-align: center;
+  cursor: pointer;
+  margin: -10px
+}
+
+
+
+.characters .result {
+  display: grid;
+  grid-template-columns: auto auto auto ;
+  grid-gap: 20px;
+  padding: 20px;
+  align-items: center;
+  justify-content: center;
+}
+
+.character-box {
+  border: 5px solid lightgreen;
+  padding: 5px;
+  color: lightgreen;
+  background-color: black;
+}
+
+.character-box h2 {
+  border-bottom: 2px solid lightgreen;
+  padding: 0;
+  width: 80%;
+  text-align: center;
+  padding-bottom:5px;
+  margin: 5px auto;
+}
+
+.character-box p b {
+  color: lightgreen
+}
+
+.character-box p {
+  color: white;
+}
+
+.character-box img {
+  width: 100%;
+}
+
+.character-box p i {
+  font-size: 20px;
+}
+
+.character-box p .fa-user-plus{
+  color: white;
+}
+
+.character-box p .fa-user-times {
+  color: crimson;
+}
+
+.character-box p .fa-male {
+  color:beige;
+}
+
+.character-box p .fa-female {
+  color: pink;
+}
+
+.characters .everyCharacter {
+  text-align: center;
+  margin: 10px auto;
+  border-radius: 20px;
+  width: 80%;
+}
+
+.everyCharacter h3 {
+  font-size: 40px;
+  color: lightgreen
+}
+
+.everyCharacter .alllist .alllist-box{
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  grid-template-columns: auto auto auto;
+  gap: 15px;
+  background-color: lime;
+  padding: 14px;
+}
+
+.alllist button {
+  font-size: 24px;
+  color: lightgreen;
+  padding: 15px;
+  background: black;
+  border: 5px solid lightgreen;
+  margin:10px auto;
+  cursor: pointer;
+}
+
+
+/* LOCATIONS SECTION */
+.App .locations{
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width:100%;
+}
+
+
+
+.locations h1 {
+  margin-top: 120px;
+  margin-bottom: 20px;
+  color: lightgreen;
+  font-size: 40px;
+}
+
+.locations form {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.locations form input {
+  width: 100%;
+  font-size: 24px;
+  color: black;
+  font-weight: 600;
+  border: 7px solid lime;
+  padding: 15px 8px;
+  text-indent: 5px;
+  margin: 10px auto;
+}
+
+.locations form button {
+  font-size: 24px;
+  padding: 15px 40px;
+  border: 5px solid lightgreen;
+  color: lightgreen;
+  background: black;
+  margin: 20px auto;
+  cursor: pointer;
+}
+
+.locations .search-res {
+  text-align: center;
+  width: 80%;
+}
+
+.search-res p {
+  color: white;
+}
+
+.search-res .search-list{
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 20px;
+}
+
+.search-res button {
+  font-size: 24px;
+  padding: 15px 40px;
+  border: 5px solid lightgreen;
+  color: lightgreen;
+  background: black;
+  margin: 20px auto;
+  cursor: pointer;
+}
+
+.locations .all-location {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
+  margin: 10px auto;
+}
+
+.all-location h3 {
+  font-size: 40px;
+  color: lightgreen;
+}
+
+.all-location button {
+  font-size: 24px;
+  padding: 15px 40px;
+  border: 5px solid lightgreen;
+  color: lightgreen;
+  background: black;
+  margin: 20px auto;
+  cursor: pointer;
+}
+
+.all-location .location-list {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 20px;
+  background-color: lime;
+  padding: 20px;
+}
+
+.location-box {
+  background: black;
+  padding: 5px;
+  border: 5px solid lightgreen;
+}
+
+.location-box h2 {
+  color: lightgreen;
+}
+
+.location-box p {
+  color: white;
+}
+
+.location-box p b {
+  color: lightgreen
+}
+
+
+
+
+
+
+
+.locations .underConstruction {
+  height: 50vh;
+  background: url("gifbg1.webp");
+  background-position: center;
+  background-repeat:no-repeat;
+  margin: 10px auto;
+  background-size: contain;
+  width: 100%;
+}
+
+/*EPISODES SECTION*/
+.App .episodes {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+}
+
+.episodes h1 {
+  margin-top: 120px;
+  margin-bottom: 10px;
+  color: lightgreen;
+  font-size: 40px;
+  text-align: center;
+}
+
+.episodes form {
+  display: flex;
+  margin: 20px auto;
+  width: 70%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.episodes form input {
+  width: 100%;
+  font-size: 24px;
+  color: black;
+  border: 7px solid limegreen;
+  background-color: whitesmoke;
+  padding: 15px;
+  outline: none;
+  text-indent: 3px;
+  margin: 10px auto;
+  font-weight: 600;
+}
+
+.episodes form button {
+  font-size: 24px;
+  padding: 15px 40px;
+  border: 5px solid lightgreen;
+  color: lightgreen;
+  background: black;
+  margin: 20px auto;
+  cursor: pointer;
+}
+
+.episode-box .search-res {
+  width: 100%;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.episodes .search-res p {
+  font-size: 18px;
+  color: white;
+}
+
+.search-res .search-res-list {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  grid-gap: 20px;
+  align-items: center;
+  justify-content: center;
+  width: 80%;
+  margin: 5px auto;
+}
+
+.search-res button {
+  font-size: 24px;
+  padding: 15px 40px;
+  border: 5px solid lightgreen;
+  color: lightgreen;
+  background: black;
+  margin: 20px auto;
+  cursor: pointer;
+}
+
+.episodes .all-episodes {
+  width: 90%;
+  padding: 20px;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.episodes h3 {
+  color: lightgreen;
+  font-size: 40px;
+  text-align: center;
+}
+
+.all-episodes .all-episodes-list {
+  background: lime;
+  padding: 15px;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 20px;
+}
+
+.all-episodes button {
+  font-size: 24px;
+  padding: 15px 40px;
+  border: 5px solid lightgreen;
+  color: lightgreen;
+  background: black;
+  margin: 20px auto;
+  cursor: pointer;
+}
+
+.episode-box {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  background: black;
+  color: lightgreen;
+  border: 5px solid lightgreen;
+}
+
+.episode-box p {
+  color: white;
+}
+
+.episode-box p b {
+  color: lightgreen
+}
+
+.episodes .underConstruction {
+  height: 50vh;
+  background: url("gifbg1.webp");
+  background-position: center;
+  background-repeat:no-repeat;
+  margin: 10px auto;
+  background-size: contain;
+  width: 100%;
+}
+
+/* RESPONSIVENESS */
+@media screen and (max-width: 1000px){
+  .home .coverBg {
+    height: 100vh;
+    background-clip: border-box;
+  }
+
+  .home .coverBg p {
+    font-size: 18px;
+  }
+}
+@media  screen and (max-width: 800px) {
+  .App nav{
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .App nav ul {
+    background-color: lightgreen;
+    flex-direction: column;
+    position: absolute;
+    top: -1000px;
+    bottom: 0;
+    right: 0;
+    left: 0px;
+    padding: 5px;
+    height: 380px;
+    width:100%;
+    display: none;
+    transition: all 0.6s ease;
+  }
+
+  nav h2 {
+    font-size: 40px;
+    display: flex;
+    margin-right: 40px ;
+  }
+
+  .home .coverBg h2 {
+    font-size: 36px;
+  }
+
+  .home .coverBg p {
+    font-size: 17px;
+  }
+
+  .home .coverBg button {
+    font-size: 22px;
+    padding: 8px 4px;
+  }
+
+  .home .quotes h2 {
+    font-size: 22px;
+  }
+
+  .quotes button {
+    font-size: 20px;
+    padding: 7px;
+  }
+
+  .quotes .quotes-area h3 {
+    font-size: 26px;
+  }
+
+  .quotes h5 {
+    font-size: 60px;
+  }
+
+  .quotes-area p {
+    font-size: 20px;
+  }
+
+  .home .services h2 {
+    font-size: 22px;
+  }
+
+  .services .service-list {
+    flex-direction: column;
+  }
+
+  .service-list .service-box h2 i{
+    font-size: 80px;
+  }
+
+  .service-box h3 {
+    font-size: 22px;
+  }
+
+  .home .about h2 {
+    font-size: 24px;
+  }
+
+  .about .about-box img {
+    width: 80%;
+  }
+
+  .about-box h3 {
+    font-size: 22px;
+  }
+
+  .about-box p {
+    font-size: 18px;
+  }
+
+  .App footer .contact h4 {
+    font-size: 40px;
+  }
+
+  .contact .contact-box a{
+    font-size: 50px;
+  }
+
+  .character-box img{
+    width: 100%;
+  }
+
+  .characters .result {
+    grid-template-columns: auto auto;
+  }
+
+  .characters .everyCharacter .alllist .alllist-box {
+    grid-template-columns: auto auto;
+  }
+
+  .characters #head {
+    font-size: 30px;
+  }
+
+  .characters form{
+    width: 90%;
+  }
+
+  .characters form input {
+    font-size: 20px;
+    padding: 8px;
+    width: 80%;
+    border: 5px solid lime;
+  }
+
+  .characters form button{
+    font-size: 20px;
+    padding: 8px;
+  }
+
+  .characters #next {
+    font-size: 20px;
+    padding: 8px;
+  }
+
+  .characters .everyCharacter .alllist button {
+    font-size: 20px;
+    padding: 8px;
+  }
+
+  .characters .everyCharacter h3 {
+    font-size: 24px;
+  }
+
+  .episodes h1 {
+    font-size: 30px;
+  }
+
+  .episodes form input {
+    font-size:22px;
+  }
+
+  .episodes form button {
+    font-size: 22px;
+    padding: 8px 15px;
+  }
+
+  .episodes .search-res p {
+    font-size: 18px;
+  }
+  .search-res .search-res-list {
+    grid-template-columns: auto auto;
+  }
+
+  .search-res button {
+    font-size: 22px;
+    padding:8px 15px;
+  }
+
+  .episodes h3 {
+    font-size: 30px;
+  }
+
+  .episodes ,.all-episodes {
+    text-align: center;
+    margin: auto;
+  }
+
+  .all-episodes .all-episodes-list {
+    grid-template-columns: auto auto;
+  }
+
+  .episodes .all-episodes button {
+    font-size: 22px;
+    padding:8px 15px;
+  }
+
+  .locations h1 {
+    font-size: 30px;
+  }
+
+  .locations form input{
+    font-size: 22px;
+    padding: 10px;
+  }
+
+  .locations form button {
+    font-size: 22px;
+    padding: 8px 10px;
+  }
+
+  .locations button{
+    font-size: 22px;
+    padding: 8px 10px;
+  }
+
+  .locations .search-res button{
+    font-size: 22px;
+    padding: 8px 10px;
+  }
+
+  .locations .search-res {
+    width: 90%;
+  }
+
+  .locations .search-res  .search-list {
+    grid-template-columns: auto auto;
+  }
+
+  .locations .all-location h3{
+    font-size: 30px;
+  }
+
+  .all-location .location-list {
+    grid-template-columns: auto auto;
+  }
+
+}
+
+@media screen and (max-width: 600px) {
+  .App footer .contact h4 {
+    font-size: 30px;
+    text-align: center;
+  }
+
+  .contact .contact-box a {
+    font-size: 40px;
+  }
+
+  .App nav img {
+    width: 60px;
+    margin-left: 15px;
+  }
+
+  .character-box img {
+    width: 100%;
+  }
+
+  .characters .result {
+    grid-template-columns: auto;
+  }
+
+  .everyCharacter .alllist .alllist-box {
+    padding: 10px;
+    overflow: scroll;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: row;
+  }
+
+  .alllist-box .character-box p {
+    margin: 5px;
+    font-size: 16px;
+  }
+
+  .alllist-box .character-box h2 {
+    font-size: 20px;
+  }
+
+  .everyCharacter .alllist .alllist-box .character-box {
+    height: 450px;
+  }
+
+  .alllist-box .character-box img{
+    width: 200px
+  }
+
+  .episodes .all-episodes .all-episodes-list {
+    width: 100%;
+    height: 400px;
+    padding: 10px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+  }
+
+  .all-episodes-list .episode-box {
+    width: 90%;
+    margin: auto;
+  }
+
+  .episodes .search-res  .search-res-list {
+    grid-template-columns:  auto;
+  }
+
+  .locations .search-res .search-list {
+    grid-template-columns: auto;
+  }
+
+  .locations .all-location {
+    width: 80%;
+  }
+
+  .locations .all-location .location-list {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    align-items: center;
+    justify-content: flex-start;
+    height: 300px;
+    width: 100%
+  }
+
+  .location-list .location-box {
+    width: 100%;
+  }
+
+  .locations form {
+    width: 90%;
+  }
+
+  .locations form input {
+    width: 80%;
+    border: 5px solid lime;
+  }
+}
+
+@media screen and (max-width: 450px) {
+
+  .App nav h2 {
+    font-size: 40px;
+    display: flex;
+    margin-right: 15px ;
+  }
+
+  nav ul li {
+    font-size: 16px;
+  }
+  .home .coverBg {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .home .coverBg h2 {
+    font-size: 28px;
+    text-align: center;
+    margin: 0;
+  }
+
+  .home .coverBg p {
+    font-size: 16px;
+    text-align:center;
+    margin: 0;
+    padding: 15px;
+  }
+
+  .home .coverBg button {
+    font-size: 20px;
+    padding: 5px 3px;
+    margin: 10px auto;
+  }
+
+  .home .quotes h2 {
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  .quotes button {
+    font-size: 20px;
+    padding: 5px;
+    margin-top: 50px;
+  }
+
+  .quotes .quotes-area h3 {
+    font-size: 25px;
+  }
+
+  .quotes h5 {
+    font-size: 40px;
+  }
+
+  .quotes-area p {
+    font-size: 18px;
+  }
+
+  .home .services h2 {
+    font-size: 20px;
+    padding: 10px;
+  }
+
+  .services .service-list {
+    flex-direction: column;
+  }
+
+  .service-list .service-box h2 i{
+    font-size: 60px;
+  }
+
+  .service-box h3 {
+    font-size: 20px;
+  }
+
+  .home .about h2 {
+    font-size: 22px;
+  }
+  .about .about-box {
+    border: 10px groove lightgreen;
+  }
+
+  .about .about-box img {
+    width: 80%;
+  }
+
+  .about-box h3 {
+    font-size: 20px;
+
+  }
+
+  .about-box p {
+    font-size: 16px;
+  }
+
+  .App footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+  }
+
+  .App footer .contact h4 {
+    font-size: 24px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .contact .contact-box a{
+    font-size: 40px;
+  }
+
+
+
+  footer p {
+    font-size: 18px;
+    text-align: center;
+    margin: 0;
+  }
+
+  .characters #head {
+    font-size: 22px;
+  }
+
+  .characters form input {
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  .characters form button{
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  .characters #next {
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  .characters .everyCharacter .alllist button {
+    font-size: 18px;
+    padding: 5px;
+  }
+
+  .characters .everyCharacter h3 {
+    font-size: 22px;
+  }
+
+  .character-box img {
+    width: 100%;
+  }
+
+  .character-box h2 {
+    font-size: 18px;
+  }
+
+  .character-box p {
+    font-size: 15px;
+    margin: 10px;
+  }
+
+  .everyCharacter .alllist .alllist-box .character-box {
+    height: 400px;
+    
+  }
+
+  .alllist-box .character-box img{
+    width: 160px
+  }
+
+  
+  .episodes h1 {
+    font-size: 24px;
+  }
+
+  .episodes form input {
+    font-size:20px;
+  }
+
+  .episodes form button {
+    font-size: 20px;
+    padding: 8px 15px;
+  }
+
+  .episodes .search-res p {
+    font-size: 16px;
+  }
+  .search-res .search-res-list {
+    grid-template-columns: auto auto;
+  }
+
+  .search-res button {
+    font-size: 20px;
+    padding:7px 13px;
+  }
+
+  .episodes h3 {
+    font-size: 24px;
+  }
+
+  .episodes .all-episodes button {
+    font-size: 20px;
+    padding:7px 13px;
+  }
+
+  .episodes form {
+    width: 90%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .episodes form input {
+    font-size: 20px;
+    padding: 8px;
+    margin: 5px auto;
+    width: 88%;
+  }
+
+  .locations h1 {
+    font-size: 24px;
+  }
+
+  .all-location h3 {
+    font-size: 24px;
+  }
+
+  .locations button {
+    font-size: 20px;
+    padding: 5px 8px;
+  }
+
+  .locations form button {
+    font-size: 20px;
+    padding: 5px 8px;
+  }
+
+  .locations .search-res button {
+    font-size: 20px;
+    padding: 5px 8px;
+  }
+
+
+
+}
+
+
